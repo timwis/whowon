@@ -1,5 +1,5 @@
 var ENDPOINT = 'https://www.kimonolabs.com/api/ondemand/bu47bvtc?apikey=e63bed3705c2516f72f7fdff47beac5a&kimmodify=1',
-  INTERVAL = 10000;
+  INTERVAL = 60000;
   template = _.template($('#tmpl-race').html());
 
 var refresh = function() {
