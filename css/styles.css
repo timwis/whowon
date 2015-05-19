@@ -15,10 +15,12 @@
 
 li.party-dem div.chart div{
 	background-color: steelblue;
+  padding: 5px 8px 5px;
 }
 
 li.party-rep div.chart div{
 	background-color: #b4464b;	
+  padding: 5px 8px 5px;
 }
 
 table {
