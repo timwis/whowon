@@ -1,4 +1,4 @@
-var ENDPOINT = 'https://www.kimonolabs.com/api/ondemand/bu47bvtc?apikey=e63bed3705c2516f72f7fdff47beac5a&kimmodify=1',
+var ENDPOINT = 'http://45.55.199.147/results.json',
   INTERVAL = 60000;
   template = _.template($('#tmpl-race').html());
 
@@ -14,10 +14,10 @@ var refresh = function() {
     });
     
     // Group candidates by race and put them into the races array
-    var candidatesByRace = _.groupBy(data.results.candidates, 'race');
-    data.results.races.forEach(function(row) {
-      row.candidates = candidatesByRace[row.race];
-    });
+    // var candidatesByRace = _.groupBy(data.results.candidates, 'race');
+    // data.results.races.forEach(function(row) {
+    //   row.candidates = candidatesByRace[row.race];
+    // });
     
     
     // Clear the container
@@ -25,7 +25,7 @@ var refresh = function() {
     container.empty();
     
     // For each race
-    data.results.races.forEach(function(race) {
+    data.results.forEach(function(race) {
       // Sort candidates by percentage
       race.candidates = _.sortBy(race.candidates, function(candidate) { return -candidate.percentage; });
       
