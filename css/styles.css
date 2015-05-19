@@ -3,6 +3,12 @@
   shape-rendering: crispEdges;
 }
 
+.alert-box.warning {
+  background-color: #B5BD00;
+  font-weight: bold;
+  font-size: 26px;
+}
+
 .graph-label {
 	float: left;
 }
@@ -13,14 +19,21 @@
   color: white;
 }
 
+li.party-dem h2, li.party-rep h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
 li.party-dem div.chart div{
-	background-color: steelblue;
+	background-color: #027EA4;
   padding: 5px 8px 5px;
+  font-weight: bold;
 }
 
 li.party-rep div.chart div{
-	background-color: #b4464b;	
+	background-color: #E4002B;	
   padding: 5px 8px 5px;
+  font-weight: bold;
 }
 
 table {
