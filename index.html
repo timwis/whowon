@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Who won</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.6/nprogress.min.css">
@@ -12,29 +13,33 @@
     <div class="row">
       <div class="large-12 columns">
         <h1>Who won</h1>
-        <p>Automatically refreshes every minute</p>
-        <div id="main"></div>
+        <p>Automatically refreshes every minute from <a href="http://phillyelectionresults.com" target="_blank">phillyelectionresults.com</a></p>
+        <div>
+          <ul class="medium-block-grid-2" id="main"></ul>
+        </div>
       </div>
     </div>
     
     <script type="text/template" id="tmpl-race">
-      <h2><%= race %></h2>
-      <div class="chart chart-<%= party %>">
-          <div style="width: <%= progress %>%"><%= progress %>% Precincts Completed</div>
-      </div>
-      <table>
-        <tr>
-          <th>Candidate</th>
-          <th>Votes</th>
-          <th></th>
-        <% for(var i = 0; i < candidates.length; i++) { %>
-        <tr>
-          <td><%= candidates[i].name %></td>
-          <td><%= candidates[i].votes %></td>
-          <td><%= candidates[i].percentage %>%</td>
-        </tr>
-        <% } %>
-      </table>
+      <li>
+        <h2><%= race %></h2>
+        <div class="chart chart-<%= party %>">
+            <div style="width: <%= progress %>%"><%= progress %>% Precincts Completed</div>
+        </div>
+        <table>
+          <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+            <th></th>
+          <% for(var i = 0; i < candidates.length; i++) { %>
+          <tr>
+            <td><%= candidates[i].name %></td>
+            <td><%= candidates[i].votes %></td>
+            <td><%= candidates[i].percentage %>%</td>
+          </tr>
+          <% } %>
+        </table>
+      </li>
     </script>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
