@@ -1,0 +1,24 @@
+.chart {
+  margin: 2em 0;
+  shape-rendering: crispEdges;
+}
+
+.graph-label {
+	float: left;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+.chart-dem {
+	background-color: steelblue;
+}
+
+.chart-rep {
+	background-color: #b4464b;	
+}
