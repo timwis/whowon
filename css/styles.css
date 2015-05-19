@@ -1,5 +1,4 @@
 .chart {
-  margin: 2em 0;
   shape-rendering: crispEdges;
 }
 
@@ -10,15 +9,13 @@
 .chart div {
   font: 10px sans-serif;
   text-align: right;
-  padding: 3px;
-  margin: 1px;
   color: white;
 }
 
-.chart-dem {
+li.party-dem div.chart div{
 	background-color: steelblue;
 }
 
-.chart-rep {
+li.party-rep div.chart div{
 	background-color: #b4464b;	
 }

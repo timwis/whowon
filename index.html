@@ -21,22 +21,31 @@
     </div>
     
     <script type="text/template" id="tmpl-race">
-      <li>
+      <li class="party-<%= party %>">
         <h2><%= race %></h2>
-        <div class="chart chart-<%= party %>">
+        <div class="chart">
             <div style="width: <%= progress %>%"><%= progress %>% Precincts Completed</div>
         </div>
         <table>
           <tr>
             <th>Candidate</th>
             <th>Votes</th>
-            <th></th>
           <% for(var i = 0; i < candidates.length; i++) { %>
           <tr>
             <td><%= candidates[i].name %></td>
             <td><%= candidates[i].votes %></td>
-            <td><%= candidates[i].percentage %>%</td>
           </tr>
+          <% if (i != (candidates.length - 1)) { %>
+          <tr>
+              <td colspan="2">
+                <div class="chart">
+                    <div style="width: <%= candidates[i].percentage %>%">
+                      <%= candidates[i].percentage %>%
+                    </div>
+                </div>
+            </td>
+          </tr>
+          <% } %>
           <% } %>
         </table>
       </li>
