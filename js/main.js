@@ -13,13 +13,6 @@ var refresh = function() {
       candidate.percentage = parseFloat(candidate.percentage);
     });
     
-    // Group candidates by race and put them into the races array
-    // var candidatesByRace = _.groupBy(data.results.candidates, 'race');
-    // data.results.races.forEach(function(row) {
-    //   row.candidates = candidatesByRace[row.race];
-    // });
-    
-    
     // Clear the container
     var container = $('#main');
     container.empty();

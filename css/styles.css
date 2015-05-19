@@ -1,5 +1,5 @@
 .chart {
-  margin: 2em 0;
+  margin: 0;
   shape-rendering: crispEdges;
 }
 
@@ -21,4 +21,8 @@
 
 .chart-rep {
 	background-color: #b4464b;	
+}
+
+table {
+  width: 100%;
 }
