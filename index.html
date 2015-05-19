@@ -12,27 +12,31 @@
     <div class="row">
       <div class="large-12 columns">
         <h1>Who won</h1>
-        <p>Automatically refreshes every minute</p>
-        <div id="main"></div>
+        <p>Automatically refreshes every minute from <a href="http://phillyelectionresults.com" target="_blank">phillyelectionresults.com</a></p>
+        <div>
+          <ul class="medium-block-grid-2" id="main"></ul>
+        </div>
       </div>
     </div>
     
     <script type="text/template" id="tmpl-race">
-      <h2><%= race %></h2>
-      <h3><%= progress %></h3>
-      <table>
-        <tr>
-          <th>Candidate</th>
-          <th>Votes</th>
-          <th></th>
-        <% for(var i = 0; i < candidates.length; i++) { %>
-        <tr>
-          <td><%= candidates[i].name %></td>
-          <td><%= candidates[i].votes %></td>
-          <td><%= candidates[i].percentage %>%</td>
-        </tr>
-        <% } %>
-      </table>
+      <li>
+        <h2><%= race %></h2>
+        <h3><%= progress %></h3>
+        <table>
+          <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+            <th></th>
+          <% for(var i = 0; i < candidates.length; i++) { %>
+          <tr>
+            <td><%= candidates[i].name %></td>
+            <td><%= candidates[i].votes %></td>
+            <td><%= candidates[i].percentage %>%</td>
+          </tr>
+          <% } %>
+        </table>
+      </li>
     </script>
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
