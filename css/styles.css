@@ -20,14 +20,18 @@ h1 {
 
 .chart {
   position: relative;
-  height: 2em;
+  height: 22px;
+  background-color: Gainsboro;
+
 }
 
 .chart div {
   position: absolute;
   font: 12px sans-serif;
   text-align: right;
-  color: #111;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .chart p {
@@ -35,7 +39,7 @@ h1 {
   font: 12px sans-serif;
   text-align: right;
   color: #111;
-  padding: .5em;
+  padding: 5px 8px 5px;  
   font-weight: bold;
 }
 
