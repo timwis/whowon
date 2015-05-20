@@ -1,5 +1,5 @@
 var ENDPOINT = 'http://45.55.199.147/results.json',
-  INTERVAL = 60000;
+  INTERVAL = 30000;
   template = _.template($('#tmpl-race').html());
 
 var refresh = function() {
