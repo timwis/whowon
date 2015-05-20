@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.6/nprogress.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <!-- Google Tag Manager -->
@@ -23,8 +24,8 @@
       <div class="large-12 columns">
         <h1>Who Won Philly</h1>
         <p>Automatically refreshes every minute from <a href="http://phillyelectionresults.com" target="_blank">phillyelectionresults.com</a>. Built at <a href="http://codeforphilly.org">Code for Philly</a>.</p>
-        <div class="alert-box warning">Data will appear below when results populate after 8pm EDT</div>
-        <div>
+        <!-- <div class="alert-box warning">Data will appear below when results populate after 8pm EDT</div>
+        <div> -->
           <ul class="medium-block-grid-2" id="main"></ul>
         </div>
       </div>
@@ -33,8 +34,10 @@
     <script type="text/template" id="tmpl-race">
       <li class="party-<%= party %>">
         <h2><%= race %></h2>
-        <div class="chart">
+        <div class="chart header">
+            <p><%= progress %>% Precincts Completed</p>
             <div style="width: <%= progress %>%"><%= progress %>% Precincts Completed</div>
+           
         </div>
         <table>
           <tr>
