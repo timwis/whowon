@@ -8,12 +8,6 @@ h1 {
   shape-rendering: crispEdges;
 }
 
-.alert-box.warning {
-  background-color: #B5BD00;
-  font-weight: bold;
-  font-size: 26px;
-}`
-
 .graph-label {
 	float: left;
 }
