@@ -11,17 +11,32 @@ h1 {
   background-color: #B5BD00;
   font-weight: bold;
   font-size: 26px;
-}
+}`
 
 .graph-label {
 	float: left;
 
 }
 
+.chart {
+  position: relative;
+  height: 2em;
+}
+
 .chart div {
+  position: absolute;
   font: 12px sans-serif;
   text-align: right;
   color: #111;
+}
+
+.chart p {
+  position: absolute;
+  font: 12px sans-serif;
+  text-align: right;
+  color: #111;
+  padding: .5em;
+  font-weight: bold;
 }
 
 li.party-dem h2, li.party-rep h2 {
