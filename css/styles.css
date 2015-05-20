@@ -1,3 +1,7 @@
+h1 {
+  font-family: 'Oxygen', sans-serif;
+}
+
 .chart {
   margin: 0;
   shape-rendering: crispEdges;
@@ -11,12 +15,13 @@
 
 .graph-label {
 	float: left;
+
 }
 
 .chart div {
   font: 12px sans-serif;
   text-align: right;
-  color: white;
+  color: #111;
 }
 
 li.party-dem h2, li.party-rep h2 {
