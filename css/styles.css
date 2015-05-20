@@ -55,6 +55,11 @@ h1 {
   font-weight: bold;
 }
 
+.cand-votes {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 li.party-dem h2, li.party-rep h2 {
   font-size: 1.5em;
   font-weight: bold;
