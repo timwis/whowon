@@ -33,57 +33,9 @@
     <div class="row">
       <div class="large-12 columns">
         <h1>Who Won Philly</h1>
-        <p>Automatically refreshes every 30 seconds from <a href="http://phillyelectionresults.com" target="_blank">phillyelectionresults.com</a>.
-        Built at <a href="http://codeforphilly.org">Code for Philly</a>.</p>
-        <div class="social">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Who Won Philly: Live election results in Philadelphia" data-via="CodeforPhilly" data-size="large" data-dnt="true">Tweet</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-        </div>
-        <div class="alert-box warning">The data below is as of Weds, May 20th, 2015 at 10:15 AM EDT.</div>
-        <div>
-          <ul class="medium-block-grid-2" id="main"></ul>
-      
-        </div>
+        <p>The City Commissioner's Office has adopted this application for the official election results! <a href="https://codeforphilly.org/blog/vote_and_watch_whowonphilly">Read about it here</a>, or:</p> 
+        <a href="http://philadelphiavotes.com/whowon" class="button">Go to the results</a></p>
       </div>
     </div>
-    
-    <script type="text/template" id="tmpl-race">
-      <li class="party-<%= party %>">
-        <h2><%= race %></h2>
-        <div class="chart header">
-            <p><%= progress %>% Precincts Completed</p>
-            <div style="width: <%= progress %>%"><%= progress %>% Precincts Completed</div>
-           
-        </div>
-        <table>
-          <tr>
-            <th>Candidate</th>
-            <th>Votes</th>
-          <% for(var i = 0; i < candidates.length; i++) { %>
-          <tr>
-            <td><%= candidates[i].name %></td>
-            <td><%= candidates[i].votes %></td>
-          </tr>
-          <% if (i != (candidates.length - 1)) { %>
-          <tr>
-              <td class="cand-votes" colspan="2">
-                <div class="chart">
-                    <div style="width: <%= candidates[i].percentage %>%">
-                      <%= candidates[i].percentage > 12 ? candidates[i].percentage + '%' : '&nbsp;'  %>
-                    </div>
-                    <span style="left:<%= candidates[i].percentage < 3 ? 3.5 : candidates[i].percentage+.5 %>%;"><%= candidates[i].percentage <= 12 ? candidates[i].percentage + '%' : '' %></span>
-                </div>
-            </td>
-          </tr>
-          <% } %>
-          <% } %>
-        </table>
-      </li>
-    </script>
-    
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.6/nprogress.min.js"></script>
-    <script src="js/main.js"></script>
   </body>
 </html>

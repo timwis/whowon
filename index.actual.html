@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Who Won Philly??</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.2/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.6/nprogress.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="Who Won Philly | A Code for Philly Project"/>
+    <meta property="og:url" content="//www.whowonphilly.com"/>
+    <meta property="og:site_name" content="Who Won Philly"/>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/timwis/whowon/gh-pages/img/og-image.png"/>
+    <link rel="image_src" href="https://raw.githubusercontent.com/timwis/whowon/gh-pages/img/og-image.png"/>
+    <meta property="og:description" content="Tracking real time election results in Philadelphia" />  
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@CodeforPhilly" />
+    <meta name="twitter:creator" content="@CodeforPhilly" />
+  </head>
+  <body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MNFWVZ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MNFWVZ');</script>
+    <!-- End Google Tag Manager -->
+    <div class="row">
+      <div class="large-12 columns">
+        <h1>Who Won Philly</h1>
+        <p>Automatically refreshes every 30 seconds from <a href="http://phillyelectionresults.com" target="_blank">phillyelectionresults.com</a>.
+        Built at <a href="http://codeforphilly.org">Code for Philly</a>.</p>
+        <div class="social">
+          <a href="https://twitter.com/share" class="twitter-share-button" data-text="Who Won Philly: Live election results in Philadelphia" data-via="CodeforPhilly" data-size="large" data-dnt="true">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+        <div class="alert-box warning">The data below is as of Weds, May 20th, 2015 at 10:15 AM EDT.</div>
+        <div>
+          <ul class="medium-block-grid-2" id="main"></ul>
+      
+        </div>
+      </div>
+    </div>
+    
+    <script type="text/template" id="tmpl-race">
+      <li class="party-<%= party %>">
+        <h2><%= race %></h2>
+        <div class="chart header">
+            <p><%= progress %>% Precincts Completed</p>
+            <div style="width: <%= progress %>%"><%= progress %>% Precincts Completed</div>
+           
+        </div>
+        <table>
+          <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+          <% for(var i = 0; i < candidates.length; i++) { %>
+          <tr>
+            <td><%= candidates[i].name %></td>
+            <td><%= candidates[i].votes %></td>
+          </tr>
+          <% if (i != (candidates.length - 1)) { %>
+          <tr>
+              <td class="cand-votes" colspan="2">
+                <div class="chart">
+                    <div style="width: <%= candidates[i].percentage %>%">
+                      <%= candidates[i].percentage > 12 ? candidates[i].percentage + '%' : '&nbsp;'  %>
+                    </div>
+                    <span style="left:<%= candidates[i].percentage < 3 ? 3.5 : candidates[i].percentage+.5 %>%;"><%= candidates[i].percentage <= 12 ? candidates[i].percentage + '%' : '' %></span>
+                </div>
+            </td>
+          </tr>
+          <% } %>
+          <% } %>
+        </table>
+      </li>
+    </script>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/nprogress/0.1.6/nprogress.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
